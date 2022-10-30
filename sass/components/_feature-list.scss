@@ -1,0 +1,33 @@
+.feature-list {
+    padding-bottom: 94px;
+    padding-top: 94px;
+}
+
+
+.feature-list__title {
+    text-transform: uppercase;
+    @include font(700, 14px, 1.14, 0.03em);
+    margin-bottom: 10px;
+}
+
+.feature-list__text {
+    color: var(--second-color);
+    @include font(null, 14px, 1.71, 0.03em);
+}
+
+.feature-list__item {
+    width: 270px;
+}
+
+.feature-list__svg {
+    height: 120px;
+    padding: 25px 100px;
+    margin-bottom: 30px;
+    border-radius: 4px;
+    background-color: var(--background-our-team);
+}
+
+.feature-list__list {
+    display: flex;
+    gap: 30px;
+}

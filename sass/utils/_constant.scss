@@ -1,0 +1,35 @@
+/* колір основного тексту #212121 */
+/* додатковий колір сірий #757575 */
+/* колір лого синій #2196F3 чорний #000000 */
+/* акцент і емейл #2196F3 */
+/* білий колір */
+/* Боді білий #F5F5F5 */
+/* Другий колір фона світло сірий #F5F4FA */
+/* focus колір #2196F3  */
+
+:root {
+    --background-color: #FFFFFF;
+    --color-logo-black: #000000;
+    --primary-color-text: #212121;
+    --accent-color: #2196F3;
+    --button-color-active: #188CE8;
+    --second-color: #757575;
+    --white-color-text: #FFFFFF;
+    --backgraund-color-button: #F5F4FA;
+    --background-hero: #C4C4C4;
+    --background-hero-gradient: rgba(47, 48, 58, 0.4);
+    --background-our-team: #F5F4FA;
+    --addres-footer: rgba(255, 255, 255, 0.6);
+    --border-filter: #EEEEEE;
+    --border-header: #ECECEC;
+    --color-our-clients: #AFB1B8;
+    --gradient-social: rgba(255, 255, 255, 0.1);
+    --background-footer: #2F303A;
+    --gradient-project: rgba(33, 150, 243, 0.9);
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--primary-color-text);
+    font-family: Roboto, sans-serif;
+}

@@ -1,0 +1,29 @@
+.list-social {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.list-social__link {
+    display: flex;
+    fill: var(--color-our-clients);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        background-color: var(--accent-color);
+        fill: var(--white-color-text);
+    }
+}
+
+.list-social__link--color {
+    background-color: var(--gradient-social);
+    fill: var(--white-color-text);
+}
