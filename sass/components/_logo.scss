@@ -1,14 +1,32 @@
 .logo {
     display: block;
-    @include font(700, 26px, 1.19, 0.03em);
     color: var(--color-logo-black);
     font-family: Raleway, sans-serif;
+    @media screen and (max-width: $desktop) {
+        @include font(700, 24px, 1.04, 0.03em);
+    }
+    @media screen and (min-width: calc($desktop - 1px)) {
+        @include font(700, 26px, 1.19, 0.03em);
+    }
 }
 
 .logo__header--position {
+    @media screen and (min-width: $mobile) {
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+
+    @media screen and (min-width: $tablet) {
+        padding-top: 26px;
+        padding-bottom: 26px;
+        margin-right: 88px;
+    }
+
+    @media screen and (min-width: $desktop) {
         padding-top: 24px;
         padding-bottom: 25px;
         margin-right: 93px;
+    }
 }
 
 .logo--blue {

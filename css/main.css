@@ -69,10 +69,24 @@ img {
 }
 
 .container {
-  max-width: 1200px;
   margin: 0 auto;
-  padding-right: 15px;
-  padding-left: 15px;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
 }
 
 .visually-hidden {
@@ -93,29 +107,41 @@ header {
   border-bottom: 1px solid var(--border-header);
 }
 
-.main-nav {
-  display: flex;
-  height: 80px;
+@media screen and (min-width: 480px) {
+  .main-nav {
+    height: 60px;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .main-nav {
+    display: flex;
+    height: 80px;
+  }
 }
 
-.site-nav {
-  display: flex;
+@media screen and (min-width: 768px) {
+  .site-nav {
+    display: flex;
+  }
 }
 
-.site-nav__link {
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  background-color: var(--white-color-text);
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  color: var(--primary-color-text);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.site-nav__link:focus, .site-nav__link:hover {
-  color: var(--accent-color);
+@media screen and (min-width: 768px) {
+  .site-nav__link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    background-color: var(--white-color-text);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--primary-color-text);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .site-nav__link:focus, .site-nav__link:hover {
+    color: var(--accent-color);
+  }
 }
 
 .site-nav__link--current {
@@ -143,51 +169,117 @@ header {
 }
 
 .contact {
-  display: flex;
   margin-left: auto;
-  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .contact {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contact {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
 }
 
 .contact__link {
   display: flex;
   align-items: center;
-  padding-top: 31px;
-  padding-bottom: 31px;
   background-color: var(--white-color-text);
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
   color: var(--second-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 768px) {
+  .contact__link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.16;
+    letter-spacing: 0.02em;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contact__link {
+    padding-top: 31px;
+    padding-bottom: 31px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+  }
 }
 .contact__link:focus, .contact__link:hover {
   color: var(--accent-color);
 }
 
-.contact__item:not(:last-child) {
-  margin-right: 30px;
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contact__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contact__item:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .contact__icon {
-  margin-right: 10px;
   fill: currentColor;
+}
+@media screen and (min-width: 768px) {
+  .contact__icon {
+    margin-right: 8px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contact__icon {
+    margin-right: 10px;
+  }
 }
 
 .logo {
   display: block;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
   color: var(--color-logo-black);
   font-family: Raleway, sans-serif;
 }
+@media screen and (max-width: 1200px) {
+  .logo {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.04;
+    letter-spacing: 0.03em;
+  }
+}
+@media screen and (min-width: 1199px) {
+  .logo {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+  }
+}
 
-.logo__header--position {
-  padding-top: 24px;
-  padding-bottom: 25px;
-  margin-right: 93px;
+@media screen and (min-width: 480px) {
+  .logo__header--position {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .logo__header--position {
+    padding-top: 26px;
+    padding-bottom: 26px;
+    margin-right: 88px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .logo__header--position {
+    padding-top: 24px;
+    padding-bottom: 25px;
+    margin-right: 93px;
+  }
 }
 
 .logo--blue {
@@ -201,9 +293,6 @@ header {
 
 .hero {
   text-align: center;
-  padding-top: 200px;
-  padding-bottom: 200px;
-  max-width: 1600px;
   background-color: var(--background-hero);
   background-image: linear-gradient(to right, var(--background-hero-gradient), var(--background-hero-gradient)), url(../images/hero-img.jpg);
   background-repeat: no-repeat;
@@ -212,17 +301,49 @@ header {
   margin-left: auto;
   margin-right: auto;
 }
+@media screen and (min-width: 480px) {
+  .hero {
+    width: 480px;
+    padding-top: 118px;
+    padding-bottom: 118px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero {
+    width: 1600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+}
 
 .hero__title {
   margin: auto;
   margin-bottom: 30px;
-  max-width: 696px;
   text-transform: uppercase;
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-  letter-spacing: 0.06em;
   color: var(--white-color-text);
+}
+@media screen and (min-width: 480px) {
+  .hero__title {
+    max-width: 360px;
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 1.62;
+    letter-spacing: 0.06em;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    max-width: 696px;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+  }
 }
 
 .hero__button {
@@ -236,12 +357,21 @@ header {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
-  padding: 10px 32px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero__button:hover, .hero__button:focus {
   background-color: var(--button-color-active);
+}
+@media screen and (min-width: 480px) {
+  .hero__button {
+    padding: 10px 24px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero__button {
+    padding: 10px 32px;
+  }
 }
 
 .feature-list {
