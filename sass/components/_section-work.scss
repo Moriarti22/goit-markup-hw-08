@@ -1,4 +1,7 @@
 .section-work {
+    @media screen and (max-width: calc($tablet - 1px)) {
+        display: none;
+    }
     padding-bottom: 94px;
 }
 

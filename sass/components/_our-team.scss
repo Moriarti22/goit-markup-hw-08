@@ -1,31 +1,56 @@
-.our-team {
+.our-team--padding {
     background-color: var(--background-our-team);
-    padding-top: 94px;
-    padding-bottom: 94px;
-
+    @media screen and (max-width: calc($desktop - 1px)) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    @media screen and (min-width: $desktop) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
 }
 
 .our-team__title {
-    margin-bottom: 50px;
     text-align: center;
-    @include font(700, 36px, 1.16, 0.03em);
+    @media screen and (max-width: calc($desktop - 1px)) {
+        margin-bottom: 30px;
+        @include font(700, 28px, 1.18, 0.03em);
+    }
+    @media screen and (min-width: $desktop) {
+        margin-bottom: 50px;
+        @include font(700, 36px, 1.17, 0.03em);
+    }
 }
-
 
 .our-team__item {
     background-color: var(--background-color);
     display: block;
     text-align: center;
-    width: 270px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
+    @media screen and (max-width: calc($tablet - 1px)) {
+        width: 450px;  
+    }
+    @media screen and (min-width: $tablet) {
+        width: 354px;
+    }
+    @media screen and (min-width: $desktop) {
+        width: 270px;
+    }
 }
 
 .our-team__list {
-    display: flex;
-    gap: 30px;
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    
 }
 
+.our-team__image {
+    width: 100%;
+}
 
 .our-team__team {
     margin-bottom: 10px;
