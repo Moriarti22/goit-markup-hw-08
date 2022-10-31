@@ -2,27 +2,55 @@ footer {
     background-color: var(--background-footer);
     padding-top: 60px;
     padding-bottom: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    @media screen and (max-width: calc($tablet - 1px)) {
+        width: $mobile;
+    }
 }
 
 .footer-bottom {
-    display: flex;
-    flex-basis: calc(100% / 2 - 30px);
-    gap: 30px;
-    align-items: baseline;
+    @media screen and (min-width: $desktop) {
+        display: flex;
+        flex-basis: calc(100% / 2 - 30px);
+        gap: 30px;
+        align-items: baseline;
+    }
+
 }
 
 .footer-bottom__left {
-    display: flex;
-    align-items: baseline;
-    flex-basis: calc(100% / 2 - 15px);
-    gap: 70px;
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        align-items: baseline;
+        flex-basis: calc(100% / 2 - 15px);
+        gap: 70px;
+    }
 }
 
 .footer-bottom__item {
-    width: 231px;
+    @media screen and (max-width: calc($tablet - 1px)) {
+        text-align: center;
+    }
+    @media screen and (min-width: $tablet) {
+        width: 231px;
+    }
+    @media screen and (max-width: calc($desktop - 1px)) {
+        &:not(:last-child) {
+            margin-bottom: 8px;
+        }
+    }
+    @media screen and (min-width: $desktop) {
+        &:not(:last-child) {
+            margin-bottom: 9px;
+        }
+    }
+    
+}
 
-    &:not(:last-child) {
-        margin-bottom: 9px;
+.address__list {
+    @media screen and (max-width: calc($desktop - 1px)) {
+        margin-bottom: 60px;
     }
 }
 
@@ -46,9 +74,21 @@ footer {
 .join {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
     width: 206px;
+    align-items: center;
+    
+    @media screen and (max-width: calc($tablet - 1px)) {
+        margin-bottom: 60px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @media screen and (min-width: $tablet) {
+        margin-left: auto;
+    }
+    @media screen and (min-width: $desktop) {
+        margin-right: auto;
+        align-items: flex-start;
+    }
 }
 
 .join__title {
@@ -61,7 +101,12 @@ footer {
 .subscription {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    @media screen and (max-width: calc($desktop - 1px)) {
+        align-items: center;
+    }
+    @media screen and (min-width: $desktop) {
+        align-items: flex-start;
+    }
 }
 
 .subscription__title {
@@ -101,11 +146,21 @@ footer {
 }
 
 .subscription__label {
-    margin-right: 12px;
+    @media screen and (max-width: calc($desktop - 1px)) {
+        margin-bottom: 20px;
+    }
+    @media screen and (min-width: $desktop) {
+        margin-right: 12px;
+    }
+    
 }
 
 .subscription__send {
     display: flex;
+    @media screen and (max-width: calc($desktop - 1px)) {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .btn-send {

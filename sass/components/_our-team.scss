@@ -39,6 +39,12 @@
     }
 }
 
+.our-team__item:not(:last-child) {
+    @media screen and (max-width: calc($tablet - 1px)) {
+        margin-bottom: 30px;
+    }
+}
+
 .our-team__list {
     @media screen and (min-width: $tablet) {
         display: flex;
@@ -65,5 +71,10 @@
 
 .our-team__content {
     padding-top: 30px;
-    padding-bottom: 30px;
+    @media screen and (max-width: calc($desktop - 1px)) {
+        padding-bottom: 24px;
+    }
+    @media screen and (min-width: $desktop) {
+        padding-bottom: 30px;
+    }
 }

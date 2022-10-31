@@ -36,4 +36,7 @@
 .logo__footer--white {
     margin-bottom: 20px;
     color: var(--white-color-text);
+    @media screen and (max-width: calc($tablet - 1px)) {
+        text-align: center;
+    }
 }
