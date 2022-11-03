@@ -3,7 +3,28 @@ header {
     border-bottom: 1px solid var(--border-header);
 }
 
+.menu-button {
+    border: none;
+    background-color: var(--white-color-text);
+    @media screen and (min-width: $tablet) {
+        display: none;
+    }
+}
+
+.menu-button__icon-cross {
+    display: none;
+}
+
+.menu-button.is-open .menu-button__icon-cross {
+    display: block;
+}
+
+.menu-button.is-open .menu-button__icon-menu {
+    display: none;
+}
+
 .main-nav {
+    display: flex;
     @media screen and (max-width: calc($tablet - 1px)) {
         height: 60px;
         align-items: center;
@@ -16,10 +37,13 @@ header {
 }
 
 .site-nav {
-    @media screen and (min-width: $tablet) {
-        display: flex;
-    }
+    display: flex;
 
+    @media screen and (max-width: calc($tablet - 1px)) {
+    width: 100%;
+    justify-content: space-between;
+    }
+    
 }
 
 .site-nav__link {
@@ -64,10 +88,18 @@ header {
 
 .site-nav__list {
     display: flex;
+    @media screen and (max-width: calc($tablet - 1px)) {
+        display: none;
+    }
 }
 
 .contact {
     margin-left: auto;
+
+    @media screen and (max-width: calc($tablet - 1px)) {
+        display: none;
+    }
+    
     @media screen and (min-width: $tablet) {
         display: flex;
         flex-direction: column;
