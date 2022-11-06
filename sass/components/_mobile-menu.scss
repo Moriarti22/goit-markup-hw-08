@@ -8,6 +8,12 @@
 .mobile-btn {
     background-color: var(--white-color-text);
     border: none;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-btn:hover,
+.mobile-btn:focus {
+    fill: var(--accent-color);
 }
 
 .mobile-menu.is-hidden {
@@ -49,6 +55,12 @@
 .mobile__link {
     color: var(--primary-color-text);
     @include font(500, 40px, 1.17, 0.02em);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile__link:hover,
+.mobile__link:focus {
+    color: var(--accent-color);
 }
 
 .mobile__item {
