@@ -27,16 +27,93 @@
           <a class="logo logo__header--position" href="./index.html" lang="en"
             ><span class="logo--blue" lang="en">Web</span>Studio</a
           >
+
+          <button class="mobile-btn mobile-open" type="button" data-mobile-open>
+            <svg width="40" height="40" aria-label="Перемикач мобільного меню">
+              <use href="./images/icons.svg#icon-menu"></use>
+            </svg>
+          </button>
+
+          <div class="mobile-menu is-hidden" data-mobile>
+            <div class="container">
+              <div class="mobile-top">
+                <button
+                  class="mobile-btn mobile-cross"
+                  type="button"
+                  data-mobile-close
+                >
+                  <svg
+                    width="40"
+                    height="40"
+                    aria-label="Перемикач мобільного меню"
+                  >
+                    <use href="./images/icons.svg#icon-cross"></use>
+                  </svg>
+                </button>
+                <div class="mobile__list">
+                  <ul>
+                    <li class="mobile__item">
+                      <a class="mobile__link" href="./index.html">Студія</a>
+                    </li>
+                    <li class="mobile__item">
+                      <a
+                        class="mobile__link mobile__link--current"
+                        href="./portfolio.html"
+                        >Портфоліо</a
+                      >
+                    </li>
+                    <li class="mobile__item">
+                      <a class="mobile__link" href="#">Контакти</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="mobile-contacts">
+                <ul>
+                  <li class="mobile-contacts__item">
+                    <a class="mobile-contacts__tel" href="tel:+380961111111">
+                      +38 096 111 11 11</a
+                    >
+                  </li>
+
+                  <li class="mobile-contacts__item">
+                    <a
+                      class="mobile-contacts__mail"
+                      href="mailto:info@devstudio.com"
+                      >info@devstudio.com</a
+                    >
+                  </li>
+                </ul>
+
+                <ul class="mobile-socnet">
+                  <li class="mobile-socnet__item">
+                    <a href="#" class="mobile-socnet__link">Instagram</a>
+                  </li>
+                  <li class="mobile-socnet__item">
+                    <a href="#" class="mobile-socnet__link">Twitter</a>
+                  </li>
+                  <li class="mobile-socnet__item">
+                    <a href="#" class="mobile-socnet__link">Facebook</a>
+                  </li>
+                  <li class="mobile-socnet__item">
+                    <a href="#" class="mobile-socnet__link">LinkedIn</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
           <ul class="site-nav__list">
             <li class="site-nav__item">
-              <a class="site-nav__link" href="./index.html">Студія</a>
+              <a
+                class="site-nav__link"
+                href="./index.html"
+                >Студія</a
+              >
             </li>
             <li class="site-nav__item">
-              <a
-                class="site-nav__link site-nav__link--current"
-                href="./portfolio.html"
-                >Портфоліо</a
-              >
+              <a class="site-nav__link site-nav__link--current" href="./portfolio.html">Портфоліо</a>
             </li>
             <li class="site-nav__item">
               <a class="site-nav__link" href="#">Контакти</a>
@@ -53,7 +130,7 @@
             >
           </li>
 
-          <li class="contact-item">
+          <li class="contact__item">
             <a class="contact__link" href="tel:+380961111111">
               <svg class="contact__icon" width="10" height="17">
                 <use href="./images/icons.svg#icon-smartphone"></use>
@@ -99,11 +176,35 @@
                 rel="noreferrer noopener noopenet"
               >
                 <div class="projects__thumb">
-                  <img
-                    src="./images/technokriak.jpg"
-                    alt="Технокряк"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/technokriak.jpg    1x,
+                        ./images/portfolio/technokriak-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio/technokriak-tablet.jpg    1x,
+                        ./images/portfolio/technokriak-tablet-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio/technokriak-mobile.jpg    1x,
+                        ./images/portfolio/technokriak-mobile-2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/portfolio/technokriak.jpg"
+                      alt="Технокряк"
+                    />
+                  </picture>
                   <p class="projects__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -125,11 +226,34 @@
                 rel="noreferrer noopener noopenet"
               >
                 <div class="projects__thumb">
-                  <img
-                    src="./images/poster-new-orlean-vs-golden-star.jpg"
-                    alt="Постер New Orlean vs Golden Star"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/poster-new-orlean-vs-golden-star.jpg    1x,
+                        ./images/portfolio/poster-new-orlean-vs-golden-star-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/poster-new-orlean-tablet.jpg    1x,
+                        ./images/portfolio/poster-new-orlean-tablet-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/poster-new-orlean-mobile.jpg    1x,
+                        ./images/portfolio/poster-new-orlean-mobile-2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/portfolio/poster-new-orlean-vs-golden-star.jpg"
+                      alt="Постер New Orlean vs Golden Star"
+                    />
+                  </picture>
+
                   <p class="projects__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -153,11 +277,34 @@
                 rel="noreferrer noopener noopenet"
               >
                 <div class="projects__thumb">
-                  <img
-                    src="./images/restoran-seafood.jpg"
-                    alt="Ресторан Seafood"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/restoran-seafood.jpg    1x,
+                        ./images/portfolio/restoran-seafood-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/restoran-seafood-tablet.jpg    1x,
+                        ./images/portfolio/restoran-seafood-tablet-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/restoran-seafood-mobile.jpg    1x,
+                        ./images/portfolio/restoran-seafood-mobile-2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/portfolio/restoran-seafood.jpg"
+                      alt="Ресторан Seafood"
+                    />
+                  </picture>
+
                   <p class="projects__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -181,11 +328,34 @@
                 rel="noreferrer noopener noopenet"
               >
                 <div class="projects__thumb">
-                  <img
-                    src="./images/proekt-prime.jpg"
-                    alt="Проєкт Prime"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/proekt-prime.jpg    1x,
+                        ./images/portfolio/proekt-prime-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/proekt-prime-tablet.jpg    1x,
+                        ./images/portfolio/proekt-prime-tablet-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/proekt-prime-mobile.jpg    1x,
+                        ./images/portfolio/proekt-prime-mobile-2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/portfolio/proekt-prime.jpg"
+                      alt="Проєкт Prime"
+                    />
+                  </picture>
+
                   <p class="projects__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -209,11 +379,33 @@
                 rel="noreferrer noopener noopenet"
               >
                 <div class="projects__thumb">
-                  <img
-                    src="./images/proekt-boxes.jpg"
-                    alt="Проєкт Boxes"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/proekt-boxes.jpg    1x,
+                        ./images/portfolio/proekt-boxes-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/proekt-boxes-tablet.jpg    1x,
+                        ./images/portfolio/proekt-boxes-tablet-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/proekt-boxes-mobile.jpg    1x,
+                        ./images/portfolio/proekt-boxes-mobile-2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/portfolio/proekt-boxes.jpg"
+                      alt="Проєкт Boxes"
+                    />
+                  </picture>
                   <p class="projects__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -237,11 +429,34 @@
                 rel="noreferrer noopener noopenet"
               >
                 <div class="projects__thumb">
-                  <img
-                    src="./images/inspiration-has-no-borders.jpg"
-                    alt="Inspiration has no Borders"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/inspiration-has-no-borders.jpg    1x,
+                        ./images/portfolio/inspiration-has-no-borders-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/inspiration-tablet.jpg    1x,
+                        ./images/portfolio/inspiration-tablet-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/inspiration-mobile.jpg    1x,
+                        ./images/portfolio/inspiration-mobile-2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/portfolio/inspiration-has-no-borders.jpg"
+                      alt="Inspiration has no Borders"
+                    />
+                  </picture>
+
                   <p class="projects__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -265,11 +480,34 @@
                 rel="noreferrer noopener noopenet"
               >
                 <div class="projects__thumb">
-                  <img
-                    src="./images/vydannia-limited-edition.jpg"
+                  <picture>
+                    <source
+                      srcset="
+                      ./images/portfolio/vydannia-limited-edition.jpg    1x,
+                      ./images/portfolio/vydannia-limited-edition-2x.jpg 2x
+                    "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                      ./images/portfolio/vydannia-limited-tablet.jpg    1x,
+                      ./images/portfolio/vydannia-limited-tablet-2x.jpg 2x
+                    "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/vydannia-limited-mobile.jpg    1x,
+                        ./images/portfolio/vydannia-limited-mobile-2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                    src="./images/portfolio/vydannia-limited-edition.jpg"
                     alt="Видання Limited Edition"
-                    width="370"
                   />
+                  </picture>
+                  
                   <p class="projects__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -293,11 +531,34 @@
                 rel="noreferrer noopener noopenet"
               >
                 <div class="projects__thumb">
-                  <img
-                    src="./images/proekt-lab.jpg"
+                  <picture>
+                    <source
+                      srcset="
+                      ./images/portfolio/proekt-lab.jpg    1x,
+                      ./images/portfolio/proekt-lab-2x.jpg 2x
+                    "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                      ./images/portfolio/proekt-lab-tablet.jpg    1x,
+                      ./images/portfolio/proekt-lab-tablet-2x.jpg 2x
+                    "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/proekt-lab-mobile.jpg    1x,
+                        ./images/portfolio/proekt-lab-mobile-2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                    src="./images/portfolio/proekt-lab.jpg"
                     alt="Проєкт LAB"
-                    width="370"
                   />
+                  </picture>
+                  
                   <p class="projects__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -321,11 +582,34 @@
                 rel="noreferrer noopener noopenet"
               >
                 <div class="projects__thumb">
-                  <img
-                    src="./images/growing-bussines.jpg"
+                  <picture>
+                    <source
+                      srcset="
+                      ./images/portfolio/growing-bussines.jpg    1x,
+                      ./images/portfolio/growing-bussines-2x.jpg 2x
+                    "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                      ./images/portfolio/growing-bussines-tablet.jpg    1x,
+                      ./images/portfolio/growing-bussines-tablet-2x.jpg 2x
+                    "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/growing-bussines-mobile.jpg    1x,
+                        ./images/portfolio/growing-bussines-mobile-2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                    src="./images/portfolio/growing-bussines.jpg"
                     alt="Growing Business"
-                    width="370"
                   />
+                  </picture>
+                  
                   <p class="projects__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -454,5 +738,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="./js/modal-mobile.js"></script>
   </body>
 </html>

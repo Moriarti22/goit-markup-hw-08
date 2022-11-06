@@ -287,6 +287,7 @@ header {
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 1;
 }
 
 .mobile-open {
@@ -326,7 +327,7 @@ header {
   color: var(--accent-color);
 }
 
-.mobile-contacts__mail {
+.mobile-contacts__tel {
   color: var(--accent-color);
   font-weight: 500;
   font-size: 34px;
@@ -334,7 +335,7 @@ header {
   letter-spacing: 0.02em;
 }
 
-.mobile-contacts__tel {
+.mobile-contacts__mail {
   color: var(--second-color);
   font-weight: 500;
   font-size: 24px;
@@ -537,6 +538,11 @@ header {
   line-height: 1.14;
   letter-spacing: 0.03em;
   margin-bottom: 10px;
+}
+@media screen and (max-width: 767px) {
+  .feature-list__title {
+    text-align: center;
+  }
 }
 
 .feature-list__text {
@@ -1332,9 +1338,17 @@ footer {
   background-color: var(--button-color-active);
 }
 
-.projects {
-  padding-top: 94px;
-  padding-bottom: 94px;
+@media screen and (max-width: 1199px) {
+  .projects {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .projects {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .projects__button {
@@ -1359,9 +1373,25 @@ footer {
 
 .projects__filter {
   display: flex;
-  margin-bottom: 50px;
-  justify-content: center;
+  flex-wrap: wrap;
   gap: 8px;
+}
+@media screen and (max-width: 767px) {
+  .projects__filter {
+    justify-content: left;
+    margin-bottom: 40px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .projects__filter {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .projects__filter {
+    margin-bottom: 50px;
+  }
 }
 
 .projects__name {
@@ -1399,15 +1429,17 @@ footer {
 .projects__list {
   display: flex;
   flex-wrap: wrap;
-  margin-top: -30px;
-  margin-left: -30px;
+  gap: 30px;
 }
-
-.projects__item {
-  display: flex;
-  flex-basis: calc(33.3333333333% - 30px);
-  margin-top: 30px;
-  margin-left: 30px;
+@media screen and (min-width: 768px) {
+  .projects__list {
+    flex-basis: 50%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .projects__list {
+    flex-basis: 33.3333333333%;
+  }
 }
 
 .projects__thumb {
@@ -1421,7 +1453,7 @@ footer {
   height: 100%;
   top: 0;
   left: 0;
-  transform: translateY(100%);
+  transform: translateY(101%);
   font-size: 18px;
   line-height: 1.55;
   letter-spacing: 0.03em;

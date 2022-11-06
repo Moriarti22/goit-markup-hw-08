@@ -1,11 +1,16 @@
 .projects {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    @media screen and (max-width: calc($desktop - 1px)) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    @media screen and (min-width: $desktop) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
 }
 
 .projects__button {
     padding: 6px 22px;
-
     font-family: inherit;
     color: var(--primary-color-text);
     background-color: var(--backgraund-color-button);
@@ -30,9 +35,20 @@
 
 .projects__filter {
     display: flex;
-    margin-bottom: 50px;
-    justify-content: center;
+    flex-wrap: wrap;
     gap: 8px;
+
+    @media screen and (max-width: calc($tablet - 1px)) {
+        justify-content: left;
+        margin-bottom: 40px;
+    }
+    @media screen and (min-width: $tablet) {
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+    @media screen and (min-width: $desktop) {
+        margin-bottom: 50px;
+    }
 }
 
 .projects__name {
@@ -70,16 +86,20 @@
 .projects__list {
     display: flex;
     flex-wrap: wrap;
-    margin-top: -30px;
-    margin-left: -30px;
+    gap: 30px;
+    @media screen and (min-width: $tablet) {
+        flex-basis: calc(100% / 2);
+        }
+    
+        @media screen and (min-width: $tablet) {
+        flex-basis: calc(100% / 3);
+        }
+    
 }
 
-.projects__item {
-    display: flex;
-    flex-basis: calc(100% / 3 - 30px);
-    margin-top: 30px;
-    margin-left: 30px;
-}
+// .projects__item {
+//     display: flex;
+// }
 
 .projects__thumb {
     position: relative;
@@ -92,7 +112,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    transform: translateY(100%);
+    transform: translateY(101%);
     @include font(null, 18px, 1.55, 0.03em);
     color: var(--white-color-text);
     background-color: var(--gradient-project);
