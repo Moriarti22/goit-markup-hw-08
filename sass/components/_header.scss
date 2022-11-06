@@ -3,30 +3,9 @@ header {
     border-bottom: 1px solid var(--border-header);
 }
 
-.menu-button {
-    border: none;
-    background-color: var(--white-color-text);
-    @media screen and (min-width: $tablet) {
-        display: none;
-    }
-}
-
-.menu-button__icon-cross {
-    display: none;
-}
-
-.menu-button.is-open .menu-button__icon-cross {
-    display: block;
-}
-
-.menu-button.is-open .menu-button__icon-menu {
-    display: none;
-}
-
 .main-nav {
     display: flex;
     @media screen and (max-width: calc($tablet - 1px)) {
-        height: 60px;
         align-items: center;
     }
 
@@ -37,6 +16,7 @@ header {
 }
 
 .site-nav {
+    position: relative;
     display: flex;
 
     @media screen and (max-width: calc($tablet - 1px)) {

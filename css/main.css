@@ -107,34 +107,11 @@ header {
   border-bottom: 1px solid var(--border-header);
 }
 
-.menu-button {
-  border: none;
-  background-color: var(--white-color-text);
-}
-@media screen and (min-width: 768px) {
-  .menu-button {
-    display: none;
-  }
-}
-
-.menu-button__icon-cross {
-  display: none;
-}
-
-.menu-button.is-open .menu-button__icon-cross {
-  display: block;
-}
-
-.menu-button.is-open .menu-button__icon-menu {
-  display: none;
-}
-
 .main-nav {
   display: flex;
 }
 @media screen and (max-width: 767px) {
   .main-nav {
-    height: 60px;
     align-items: center;
   }
 }
@@ -146,6 +123,7 @@ header {
 }
 
 .site-nav {
+  position: relative;
   display: flex;
 }
 @media screen and (max-width: 767px) {
@@ -284,6 +262,113 @@ header {
   .contact__icon {
     margin-right: 10px;
   }
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-menu,
+.mobile-btn {
+    display: none;
+  }
+}
+
+.mobile-btn {
+  background-color: var(--white-color-text);
+  border: none;
+}
+
+.mobile-menu.is-hidden {
+  display: none;
+}
+
+.mobile-menu {
+  position: fixed;
+  background-color: var(--white-color-text);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.mobile-open {
+  padding-top: 10px;
+  padding-bottom: 6px;
+}
+
+.mobile-menu .container {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 40px;
+  padding-right: 15px;
+  padding-bottom: 48px;
+}
+
+.mobile-cross {
+  width: 100%;
+  padding-top: 8px;
+  text-align: right;
+}
+
+.mobile__link {
+  color: var(--primary-color-text);
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+}
+
+.mobile__item {
+  margin-bottom: 32px;
+}
+
+.mobile__link.mobile__link--current {
+  color: var(--accent-color);
+}
+
+.mobile-contacts__mail {
+  color: var(--accent-color);
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+}
+
+.mobile-contacts__tel {
+  color: var(--second-color);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.16;
+  letter-spacing: 0.02em;
+}
+
+.mobile-contacts__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mobile-contacts__item:last-child {
+  margin-bottom: 64px;
+}
+
+.mobile-socnet {
+  display: inline-flex;
+}
+
+.mobile-socnet__link {
+  color: var(--accent-color);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+}
+
+.mobile-socnet__item:not(:last-child) {
+  padding-right: 10px;
+  border-right: 1px solid var(--second-color);
+}
+
+.mobile-socnet__item:not(:first-child) {
+  margin-left: 10px;
 }
 
 .logo {
