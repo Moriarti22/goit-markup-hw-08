@@ -1,11 +1,8 @@
 .feature-list {
     margin-left: auto;
     margin-right: auto;
-
-    @media screen and (max-width: calc($desktop - 1px)) {
-        padding-bottom: 60px;
-        padding-top: 60px;
-    }
+    padding-bottom: 60px;
+    padding-top: 60px;
 
     @media screen and (min-width: $desktop) {
         padding-bottom: 94px;
@@ -18,8 +15,9 @@
     text-transform: uppercase;
     @include font(700, 14px, 1.14, 0.03em);
     margin-bottom: 10px;
-    @media screen and (max-width: calc($tablet - 1px)) {
-        text-align: center;
+    text-align: center;
+    @media screen and (min-width: $tablet) {
+        text-align: left;
     }
 }
 
@@ -29,9 +27,8 @@
 }
 
 .feature-list__item {
-    @media screen and (max-width: calc($tablet - 1px)) {
-        width: 450px;
-    }
+    width: 450px;
+
     @media screen and (min-width: $tablet) {
         width: 354px;
     }
@@ -51,17 +48,9 @@
 }
 
 .feature-list__list {
-    @media screen and (max-width: calc($tablet - 1px)) {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 30px;
-    }
-
-    @media screen and (min-width: $tablet) {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 30px;
-    }
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
     
     @media screen and (min-width: $desktop) {
         flex-basis: calc(100% / 4);

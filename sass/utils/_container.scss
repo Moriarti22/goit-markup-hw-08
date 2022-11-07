@@ -2,10 +2,7 @@
     margin: 0 auto;
     padding-right: 15px;
     padding-left: 15px;
-
-    @media screen and (max-width: calc($tablet - 1px)) {
-        width: $mobile;
-    }
+    width: $mobile;
 
     @media screen and (min-width: $tablet) {
         width: $tablet;

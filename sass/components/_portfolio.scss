@@ -1,8 +1,7 @@
 .projects {
-    @media screen and (max-width: calc($desktop - 1px)) {
-        padding-top: 60px;
-        padding-bottom: 60px;
-    }
+    padding-top: 60px;
+    padding-bottom: 60px;
+
     @media screen and (min-width: $desktop) {
         padding-top: 94px;
         padding-bottom: 94px;
@@ -34,8 +33,9 @@
     }
 
 .projects__item:nth-child(3) {
-    @media screen and (max-width: calc($tablet - 1px)) {
-        margin-right: 25px;
+    margin-right: 25px;
+    @media screen and (min-width: $tablet) {
+        margin-right: 0px;
     }
 }
 
@@ -43,11 +43,8 @@
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-
-    @media screen and (max-width: calc($tablet - 1px)) {
-        justify-content: left;
-        margin-bottom: 40px;
-    }
+    justify-content: left;
+    margin-bottom: 40px;
     @media screen and (min-width: $tablet) {
         justify-content: center;
         margin-bottom: 30px;

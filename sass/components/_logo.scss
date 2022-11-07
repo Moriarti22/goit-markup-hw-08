@@ -2,19 +2,16 @@
     display: block;
     color: var(--color-logo-black);
     font-family: Raleway, sans-serif;
-    @media screen and (max-width: $desktop) {
-        @include font(700, 24px, 1.04, 0.03em);
-    }
-    @media screen and (min-width: calc($desktop - 1px)) {
+    @include font(700, 24px, 1.04, 0.03em);
+
+    @media screen and (min-width: $desktop) {
         @include font(700, 26px, 1.19, 0.03em);
     }
 }
 
 .logo__header--position {
-    @media screen and (max-width: calc($tablet - 1px)) {
-        padding-top: 16px;
-        padding-bottom: 16px;
-    }
+    padding-top: 16px;
+    padding-bottom: 16px;
 
     @media screen and (min-width: $tablet) {
         padding-top: 26px;
@@ -25,7 +22,7 @@
     @media screen and (min-width: $desktop) {
         padding-top: 24px;
         padding-bottom: 25px;
-        margin-right: 93px;
+        margin-right: 92px;
     }
 }
 
@@ -36,7 +33,8 @@
 .logo__footer--white {
     margin-bottom: 20px;
     color: var(--white-color-text);
-    @media screen and (max-width: calc($tablet - 1px)) {
-        text-align: center;
+    text-align: center;
+    @media screen and (min-width: $tablet) {
+        text-align: left;
     }
 }
