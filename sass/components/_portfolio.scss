@@ -33,6 +33,12 @@
         }
     }
 
+.projects__item:nth-child(3) {
+    @media screen and (max-width: calc($tablet - 1px)) {
+        margin-right: 25px;
+    }
+}
+
 .projects__filter {
     display: flex;
     flex-wrap: wrap;
