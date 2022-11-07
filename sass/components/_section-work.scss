@@ -1,5 +1,5 @@
 .section-work {
-    @media screen and (max-width: $desktop - 1px) {
+    @media screen and (max-width: calc($desktop - 1px)) {
         position: absolute;
         white-space: nowrap;
         width: 1px;
