@@ -33,8 +33,4 @@
 .logo__footer--white {
     margin-bottom: 20px;
     color: var(--white-color-text);
-    text-align: center;
-    @media screen and (min-width: $tablet) {
-        text-align: left;
-    }
 }

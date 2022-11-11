@@ -263,6 +263,28 @@ header {
   }
 }
 
+.contact__icon--envelope {
+  width: 14px;
+  height: 10px;
+}
+@media screen and (min-width: 1200px) {
+  .contact__icon--envelope {
+    width: 16px;
+    height: 12px;
+  }
+}
+
+.contact__icon--smartphone {
+  width: 10px;
+  height: 14px;
+}
+@media screen and (min-width: 1200px) {
+  .contact__icon--smartphone {
+    width: 10px;
+    height: 16px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .mobile-menu,
 .mobile-btn {
@@ -427,12 +449,6 @@ header {
 .logo__footer--white {
   margin-bottom: 20px;
   color: var(--white-color-text);
-  text-align: center;
-}
-@media screen and (min-width: 768px) {
-  .logo__footer--white {
-    text-align: left;
-  }
 }
 
 .hero {
@@ -443,7 +459,8 @@ header {
   background-position: center;
   margin-left: auto;
   margin-right: auto;
-  width: 480px;
+  max-width: 1600px;
+  min-width: 480px;
   padding-top: 118px;
   padding-bottom: 118px;
   background-image: linear-gradient(to right, var(--background-hero-gradient), var(--background-hero-gradient)), url(../images/hero-mobile.jpg);
@@ -455,7 +472,6 @@ header {
 }
 @media screen and (min-width: 768px) {
   .hero {
-    width: 768px;
     padding-top: 118px;
     padding-bottom: 118px;
     background-image: linear-gradient(to right, var(--background-hero-gradient), var(--background-hero-gradient)), url(../images/hero-tablet.jpg);
@@ -468,7 +484,6 @@ header {
 }
 @media screen and (min-width: 1200px) {
   .hero {
-    width: 1600px;
     padding-top: 200px;
     padding-bottom: 200px;
     background-image: linear-gradient(to right, var(--background-hero-gradient), var(--background-hero-gradient)), url(../images/hero-img.jpg);
@@ -649,13 +664,14 @@ header {
   color: var(--white-color-text);
 }
 
-.our-team--padding {
-  background-color: var(--background-our-team);
+.our-team {
+  min-width: 480px;
   padding-top: 60px;
   padding-bottom: 60px;
+  background-color: var(--background-our-team);
 }
 @media screen and (min-width: 1200px) {
-  .our-team--padding {
+  .our-team {
     padding-top: 94px;
     padding-bottom: 94px;
   }
@@ -759,12 +775,12 @@ header {
   fill: var(--white-color-text);
 }
 
-.regular-clients--padding {
+.regular-clients {
   padding-top: 60px;
   padding-bottom: 60px;
 }
 @media screen and (min-width: 1200px) {
-  .regular-clients--padding {
+  .regular-clients {
     padding-top: 94px;
     padding-bottom: 94px;
   }
@@ -828,52 +844,59 @@ footer {
   min-width: 480px;
 }
 
+.footer-address {
+  width: 232px;
+  text-align: center;
+  display: inline-block;
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .footer-address {
+    margin-bottom: 0px;
+    margin-right: 70px;
+    text-align: left;
+  }
+}
+
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+}
 @media screen and (min-width: 1200px) {
   .footer-bottom {
-    display: flex;
+    flex-direction: row;
     flex-basis: calc(50% - 30px);
     gap: 30px;
     align-items: baseline;
   }
 }
 
+.footer-bottom__left {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  margin: 0 auto;
+}
 @media screen and (min-width: 768px) {
   .footer-bottom__left {
-    display: flex;
-    align-items: baseline;
-    flex-basis: calc(50% - 15px);
-    gap: 70px;
+    flex-direction: row;
+    margin: 0;
+    justify-content: space-around;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-bottom__left {
+    width: 50%;
+    justify-content: flex-start;
   }
 }
 
-.footer-bottom__item {
-  text-align: center;
-}
 .footer-bottom__item:not(:last-child) {
   margin-bottom: 8px;
-}
-@media screen and (min-width: 768px) {
-  .footer-bottom__item {
-    text-align: left;
-  }
-}
-@media screen and (min-width: 768px) {
-  .footer-bottom__item {
-    width: 231px;
-  }
 }
 @media screen and (min-width: 1200px) {
   .footer-bottom__item:not(:last-child) {
     margin-bottom: 9px;
-  }
-}
-
-.address__list {
-  margin-bottom: 60px;
-}
-@media screen and (min-width: 1200px) {
-  .address__list {
-    margin-bottom: 0px;
   }
 }
 
@@ -904,13 +927,14 @@ footer {
 }
 @media screen and (min-width: 768px) {
   .join {
-    margin-left: auto;
     margin-bottom: 0px;
+    margin-right: 0;
+    margin-left: 0;
   }
 }
 @media screen and (min-width: 1200px) {
   .join {
-    margin-right: auto;
+    margin: 0;
     align-items: flex-start;
   }
 }

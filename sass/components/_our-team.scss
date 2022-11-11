@@ -1,12 +1,14 @@
-.our-team--padding {
-    background-color: var(--background-our-team);
+.our-team {
+    min-width: $mobile;
     padding-top: 60px;
     padding-bottom: 60px;
+    background-color: var(--background-our-team);
     @media screen and (min-width: $desktop) {
         padding-top: 94px;
         padding-bottom: 94px;
     }
 }
+
 
 .our-team__title {
     text-align: center;

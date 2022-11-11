@@ -150,3 +150,21 @@ header {
         margin-right: 10px;
     }
 }
+
+.contact__icon--envelope {
+    width: 14px;
+    height: 10px;
+    @media screen and (min-width: $desktop) {
+        width: 16px;
+        height: 12px;
+    }
+}
+
+.contact__icon--smartphone {
+    width: 10px;
+    height: 14px;
+    @media screen and (min-width: $desktop) {
+        width: 10px;
+        height: 16px;
+    }
+}
