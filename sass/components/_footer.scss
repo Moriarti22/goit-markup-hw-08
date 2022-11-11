@@ -10,9 +10,10 @@ footer {
     text-align: center;
     display: inline-block;
     margin-bottom: 60px;
-
-    @media screen and (min-width: $desktop) {
+    @media screen and (min-width: $tablet) {
         margin-bottom: 0px;
+    }
+    @media screen and (min-width: $desktop) {
         margin-right: 70px;
         text-align: left;
     }
@@ -33,14 +34,15 @@ footer {
 .footer-bottom__left {
     display: flex;
     flex-direction: column;
-    align-items: baseline;
-    margin: 0 auto;
+    align-items: center;
+    margin-bottom: 60px;
     @media screen and (min-width: $tablet) {
+        align-items: baseline;
         flex-direction: row;
-        margin: 0;
         justify-content: space-around;
     }
     @media screen and (min-width: $desktop) {
+        margin-bottom: 0px;
         width: calc(100% / 2);
         justify-content: flex-start;
     }
@@ -80,15 +82,7 @@ footer {
     flex-direction: column;
     width: 206px;
     align-items: center;
-    margin-bottom: 60px;
-    margin-right: auto;
-    margin-left: auto;
 
-    @media screen and (min-width: $tablet) {
-        margin-bottom: 0px;
-        margin-right: 0;
-        margin-left: 0;
-    }
     @media screen and (min-width: $desktop) {
         margin: 0;
         align-items: flex-start;

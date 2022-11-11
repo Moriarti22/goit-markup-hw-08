@@ -32,14 +32,38 @@
         }
     }
 
-.projects__item:nth-child(3) {
+.projects__item {
+        @media screen and (min-width: $tablet) {
+        flex-basis: calc((100% - 30px) / 2);
+        }
+    
+        @media screen and (min-width: $desktop) {
+        flex-basis: calc((100% - 60px) / 3);
+        }
+
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        &:hover,
+        &:focus {
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+                0px 4px 4px rgba(0, 0, 0, 0.06),
+                1px 4px 6px rgba(0, 0, 0, 0.16);
+        }
+}
+
+.projects__link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.projects-filter__item:nth-child(3) {
     margin-right: 25px;
     @media screen and (min-width: $tablet) {
         margin-right: 0px;
     }
 }
 
-.projects__filter {
+.projects-filter {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
@@ -65,39 +89,19 @@
     @include font(null, 16px, 1.87, 0.03em);
 }
 
+
 .projects__data {
+    flex-grow: 1;
     border-left: 1px solid var(--border-filter);
     border-right: 1px solid var(--border-filter);
     border-bottom: 1px solid var(--border-filter);
-
-    padding-top: 20px;
-    padding-left: 20px;
-    padding-bottom: 20px;
+    padding: 20px 24px;
 }
 
 .projects__list {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    @media screen and (min-width: $tablet) {
-        flex-basis: calc(100% / 2);
-        }
-    
-        @media screen and (min-width: $tablet) {
-        flex-basis: calc(100% / 3);
-        }
-    
-}
-
-.projects__item {
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    
-        &:hover,
-        &:focus {
-            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
-                0px 4px 4px rgba(0, 0, 0, 0.06),
-                1px 4px 6px rgba(0, 0, 0, 0.16);
-        }
 }
 
 .projects__thumb {
@@ -107,11 +111,10 @@
 
 .projects__text {
     position: absolute;
-    width: 100%;
     height: 100%;
     top: 0;
     left: 0;
-    transform: translateY(101%);
+    transform: translateY(100%);
     @include font(null, 18px, 1.55, 0.03em);
     color: var(--white-color-text);
     background-color: var(--gradient-project);
