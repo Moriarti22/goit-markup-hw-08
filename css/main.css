@@ -869,8 +869,7 @@ footer {
 @media screen and (min-width: 1200px) {
   .footer-bottom {
     flex-direction: row;
-    flex-basis: calc(50% - 30px);
-    gap: 30px;
+    gap: 93px;
     align-items: baseline;
   }
 }
@@ -891,7 +890,6 @@ footer {
 @media screen and (min-width: 1200px) {
   .footer-bottom__left {
     margin-bottom: 0px;
-    width: 50%;
     justify-content: flex-start;
   }
 }

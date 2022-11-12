@@ -23,8 +23,7 @@ footer {
     flex-direction: column;
     @media screen and (min-width: $desktop) {
         flex-direction: row;
-        flex-basis: calc(100% / 2 - 30px);
-        gap: 30px;
+        gap: 93px;
         align-items: baseline;
     }
 
@@ -42,7 +41,6 @@ footer {
     }
     @media screen and (min-width: $desktop) {
         margin-bottom: 0px;
-        width: calc(100% / 2);
         justify-content: flex-start;
     }
 }
